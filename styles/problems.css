@@ -1,0 +1,117 @@
+
+body {
+    /*background-image: url('../images/hack3rman.png');*/
+    background-repeat: no-repeat;
+    background-attachment: local;
+    /*background-position: initial;*/
+    background-size: cover;
+    background-color: #272727;
+    /*height: 7070px; !* 770px*!*/
+    /*width: 1420px;  !* 1420px*!*/
+    z-index: -5;
+    color: #909090;;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 96%;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: fixed;
+    z-index: 9999;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #909090;
+    text-align: center;
+    /*padding-right: 16px;*/
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    /*-khtml-user-select: none;*/
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.hint_button, .hint_button:hover {
+  background-color: #272727;
+  color: #2060FF;
+  cursor: pointer;
+  
+  /*overflow: hidden;*/
+  display: none;
+
+  padding: 0px;
+  padding-top: 20px;
+  width: 10%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+input[type=math_answer] {
+  background-color: #272727;
+  color: #909090;
+  border: 2px solid #000000;
+  /*padding: 5px;*/
+  border-radius: 4px;
+}
+
+input[type=math_answer]:focus {
+  background-color: #404040;
+  outline: none;
+  /*color: #909090;
+  border: 2px solid #000000;
+  border-radius: 4px;*/
+}
+
+.answer_form {
+  background-color: #272727;
+  color: #909090;
+  padding-top: 20px;
+  width: 20%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/*.collapsible:hover {
+  background-color: #272727;
+}*/
+
+/* Style the collapsible content. Note: hidden by default */
+.hint_content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #272727;
+  color: #909090;
+}
+
+ /*Change the link color to #272727 (black) on hover*/
+/*li a:hover {*/
+/*    background-color: #353535;*/
+/*}*/
+
+.active {
+    background-color: #272727;
+}

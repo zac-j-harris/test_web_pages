@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problems - Home</title>
+    <!-- Include CSS File Here -->
+    <link rel="stylesheet" href="../styles/problems.css"/>
+    <!-- Include JS File Here -->
+    <!-- <script src="../js/home.js"></script> -->
+</head>
+<body>
+
+<div id="top_navigation_bar">
+    <ul>
+        <!-- <li style="float:right"><a class="unselectable" href="./about.html">About</a></li>
+        <li style="float:right"><a class="unselectable" href="./draw_dots.html">Dots</a></li>
+        <!- <li style="float:right"><a class="unselectable" href="login.html">Login</a></li> ->
+        <li style="float:right"><a class="unselectable" href="./home.html">Home</a></li>
+        <li style="float:right"><a class="unselectable" href="./particles.html">Particles</a></li> -->
+        <!-- <li style="float:right"><a class="unselectable" href="./problems.html">Problems</a></li> -->
+    </ul>
+</div>
+
+<div id="Problem">
+    <h2>June 09, 2021</h2>
+    If a triangle has a base length of 25 inches, and is 40 inches tall, what is the area of the triangle?
+    <!-- If he doesn’t know, Hint: Area of a triangle is 1/2 * base * height -->
+</div>
+
+
+<div id="Answer">
+    <form id="answer_form" class="answer_form" onsubmit="validate(); return false;">  
+        Answer: <br> <br>
+        <input id="math_answer" type="math_answer" name="math_answer" value=""> in &sup2;
+    </form>
+
+    <script src="../js/answer.js"></script>
+
+</div>
+
+<div id="Correct">
+        <!-- Test -->
+</div>
+
+
+<div id="Hint">
+    <button type="button" id="hint_button" class="hint_button">Hint...</button>
+    <div class="hint_content">
+        <p>Area of a triangle = 1/2 * base * height</p>
+    </div>
+
+    <script src="../js/hint.js"></script>
+</div>
+
+
+</body>
+</html>
