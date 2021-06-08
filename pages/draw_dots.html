@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WavyBaby - Dots</title>
+    <!-- Include CSS File Here -->
+    <link rel="stylesheet" href="../styles/draw_dots.css"/>
+    <!-- Include JS File Here -->
+<!--    <script src="../js/home.js"></script>-->
+</head>
+<body>
+<div id="top_navigation_bar">
+    <ul>
+        <li style="float:right"><a class="unselectable" href="./about.html">About</a></li>
+        <li style="float:right"><a class="unselectable" href="./draw_dots.html">Dots</a></li>
+        <!-- <li style="float:right"><a class="unselectable" href="login.html">Login</a></li> -->
+        <li style="float:right"><a class="unselectable" href="./home.html">Home</a></li>
+        <li style="float:right"><a class="unselectable" href="./particles.html">Particles</a></li>
+        <!-- <li style="float:right"><a class="unselectable" href="./particles.html">Problems</a></li> -->
+    </ul>
+</div>
+
+<script>
+    (function() {
+        "use strict";
+        let canDraw = true;
+        document.onmousedown = handleMouseDown;
+        function handleMouseDown(event) {
+            canDraw = false;
+        }
+        document.onmouseup = handleMouseUp;
+        function handleMouseUp(event) {
+            canDraw = true;
+        }
+        document.onmousemove = handleMouseMove;
+        function handleMouseMove(event) {
+            let dot, eventDoc, doc, body;
+
+            event = event || window.event; // IE-ism
+
+            // If pageX/Y aren't available and clientX/Y
+            // are, calculate pageX/Y - logic taken from jQuery
+            // Calculate pageX/Y if missing and clientX/Y available
+            if (event.pageX == null && event.clientX != null) {
+                eventDoc = (event.target && event.target.ownerDocument) || document;
+                doc = eventDoc.documentElement;
+                body = eventDoc.body;
+
+                event.pageX = event.clientX +
+                    (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+                    (doc && doc.clientLeft || body && body.clientLeft || 0);
+                event.pageY = event.clientY +
+                    (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+                    (doc && doc.clientTop  || body && body.clientTop  || 0 );
+            }
+            if (canDraw) {
+                // Add a dot to follow the cursor
+                dot = document.createElement('div');
+                dot.className = "dot";
+                dot.style.left = event.pageX + "px";
+                dot.style.top = event.pageY + "px";
+                document.body.appendChild(dot);
+            }
+        }
+    })();
+</script>
+</body>
+</html>
