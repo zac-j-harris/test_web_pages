@@ -10,7 +10,7 @@ function validate() {
 	var answer = math_answer.value;
 	// alert("" + answer);
 
-if (answer == "19") {
+if (answer == "10") {
 	document.getElementById("Correct").innerHTML="<h4>Correct!</h4>";
 }
 else {
