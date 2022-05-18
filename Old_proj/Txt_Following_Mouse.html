@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                margin: 0; /* pixel value of border buffer */
+                overflow: hidden; /* hidden - shown */
+                height: 3000px;
+            }
+        </style>
+        <title>My First Web Page!</title>
+    </head>
+
+    <body>
+        <!--Nothing useful here-->
+        <div id="TEST">THIS IS A TEST</div>
+    </body>
+    <script type="text/javascript">
+
+        var s = document.getElementById("TEST");
+
+        document.onmousemove = handleMouseMove;
+        function handleMouseMove(event) {
+            s.style.position = 'absolute';
+            s.style.margin = '0';
+            s.style.padding = '5px';
+            s.style.border = '1px solid red';
+            s.style.left = event.pageX + "px";
+            s.style.top = event.pageY + "px";
+        }
+    </script>
+</html>
