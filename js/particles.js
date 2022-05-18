@@ -156,7 +156,7 @@
 
     function renderCanvas() {
       // ctx.globalAlpha = 1.0;
-      // ctx.globalCompositeOperation = 'source-over';
+      ctx.globalCompositeOperation = 'source-over';
       // ctx.globalCompositeOperation = 'darken';
       // ctx.globalCompositeOperation = "screen";
       // ctx.globalCompositeOperation = 'destination-over'; // really cool flower thing if from center, and not switched to SO
@@ -165,18 +165,18 @@
       // ctx.globalCompositeOperation = 'lighter';
       // ctx.globalCompositeOperation = 'color';
 
-      ctx.globalAlpha = 0.01;           // fade rate
-      ctx.globalCompositeOperation = "destination-out"  // fade out destination pixels
-      ctx.fillRect(0,0,width,height)
-      ctx.globalCompositeOperation = "source-over"
-      ctx.globalAlpha = 1;           // reset alpha
+      // ctx.globalAlpha = 0.01;           // fade rate
+      // ctx.globalCompositeOperation = "destination-out"  // fade out destination pixels
+      // ctx.fillRect(0,0,width,height)
+      // ctx.globalCompositeOperation = "source-over"
+      // ctx.globalAlpha = 1;           // reset alpha
 
 
       // ctx.clearRect(0, 0, width, height);
 
-      // ctx.fillStyle = 'rgba(1,4.5,11.75,0.05)';  // this is how it gives it a tail: fills everything gradually this color
+      ctx.fillStyle = 'rgba(1,4.5,11.75,0.05)';  // this is how it gives it a tail: fills everything gradually this color
       // lower alpha, longer tails
-      // ctx.fillRect(0, 0, width, height);
+      ctx.fillRect(0, 0, width, height);
       
       // ctx.globalCompositeOperation = 'source-over';	// compositor operation for balls source-over
       // ctx.fillStyle = 'rgba(1,4.5,11.75,0.05)';
