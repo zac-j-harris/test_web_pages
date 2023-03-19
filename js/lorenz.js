@@ -24,7 +24,7 @@
 })({
     "./src/js/index.js": [function(require, module, exports) {
         var count_parts = 5000, // 2000
-            fps = 60; // 40
+            dx_ds = 35; // 40
         var Particle = require('./particles'),
             canvas = document.querySelector('#particlesField'),
             ctx = canvas.getContext('2d'),
@@ -38,7 +38,7 @@
                 size: Math.max(Math.max(width, height) / count_parts, 0.55),
                 minSpeed: 2, // 1, 50
                 maxSpeed: 50, // 50, 2000
-                dt: fps / count_parts,
+                dt: dx_ds / count_parts,
                 startOrigin: {
                     // x: window.innerWidth / 2.0,
                     // y: window.innerHeight / 2.0
