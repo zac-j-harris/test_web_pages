@@ -35,9 +35,9 @@
                 // count: 1000,
                 count: count_parts,
                 // size: Math.max(width, height) / 40,
-                size: Math.max(Math.max(width, height) / count_parts, 0.66),
-                minSpeed: 50, // 1
-                maxSpeed: 2000, // 50
+                size: Math.max(Math.max(width, height) / count_parts, 0.55),
+                minSpeed: 2, // 1, 50
+                maxSpeed: 50, // 50, 2000
                 dt: fps / count_parts,
                 startOrigin: {
                     // x: window.innerWidth / 2.0,
@@ -85,7 +85,7 @@
             X_or = 1.0; // 1
             Y_or = 1.0; // 1
             Z_or = 1.0; // 1
-            s = 45.0; // 10
+            s = 10.0; // 10, 45
             r = 28.0; // 28
             b = 8.0/3.0; // 8/3
             // dt = .0025;
@@ -93,7 +93,7 @@
             scale = 15.00; // 17
             xtrans = window.innerWidth / 2;
             ytrans = window.innerHeight;
-            xAng = 90.0;
+            xAng = 90.0; // 90
             yAng = 0.0;
             zAng = 0.0;
             // window.alert('test');  // test if it works
