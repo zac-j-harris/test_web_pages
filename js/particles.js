@@ -23,6 +23,7 @@
   return s
 })({
   "./src/js/index.js": [function(require, module, exports) {
+    var count_parts = 2000;
     var Particle = require('./particles'),
       canvas = document.querySelector('#particlesField'),
       ctx = canvas.getContext('2d'),
@@ -31,8 +32,8 @@
 
       presetDefault = {
         // count: 1000,
-        count: 2000,
-        size: Math.max(width, height) / 2000,
+        count: count_parts,
+        size: Math.max(width, height) / count_parts,
         minSpeed: 1,
         maxSpeed: 50,
         startOrigin: {
@@ -43,8 +44,8 @@
 
       presetModerate = {
         // count: 1000,
-        count: 2000,
-        size: Math.max(width, height) / 2000,
+        count: count_parts,
+        size: Math.max(width, height) / count_parts,
         minSpeed: 10,
         maxSpeed: 50,
         startOrigin: {
@@ -55,7 +56,7 @@
 
       presetFast = {
         count: 1000,
-        size: Math.max(width, height) / 2000,
+        size: Math.max(width, height) / count_parts,
         minSpeed: 20,
         maxSpeed: 100,
         startOrigin: {
@@ -65,8 +66,8 @@
       },
 
       presetCentralExplode = {
-        count: 1000,
-        size: Math.max(width, height) / 2000,
+        count: count_parts / 2,
+        size: Math.max(width, height) / count_parts,
         minSpeed: 1,
         maxSpeed: 100,
         startOrigin: {
@@ -76,7 +77,7 @@
       },
 
       presetInsaneRandomSizeFromLeftTop = {
-        count: 2000,
+        count: count_parts,
         size: function() {
           return Math.random() * 10 + 1;
         },
@@ -89,7 +90,7 @@
       },
 
       presetInsaneRandomSizeFromCenter = {
-        count: 2000,
+        count: count_parts,
         size: function() {
           return Math.random() * 2 + 0.2;
         },
