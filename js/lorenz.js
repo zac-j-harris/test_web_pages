@@ -23,6 +23,7 @@
   return s
 })({
     "./src/js/index.js": [function(require, module, exports) {
+        var count_parts = 2000;
         var Particle = require('./particles'),
             canvas = document.querySelector('#particlesField'),
             ctx = canvas.getContext('2d'),
@@ -31,11 +32,11 @@
 
             presetDefault = {
                 // count: 1000,
-                count: 2000,
-                size: Math.max(width, height) / 2000,
+                count: count_parts,
+                size: Math.max(width, height) / count_parts,
                 minSpeed: 1,
                 maxSpeed: 50,
-                dt: 40 / 2000,
+                dt: 40 / count_parts,
                 startOrigin: {
                     // x: window.innerWidth / 2.0,
                     // y: window.innerHeight / 2.0
