@@ -45,7 +45,8 @@
       presetModerate = {
         // count: 1000,
         count: count_parts,
-        size: Math.max(width, height) / count_parts,
+        // size: Math.max(width, height) / count_parts,
+        size: Math.max(width, height) / 4500,
         minSpeed: 10,
         maxSpeed: 50,
         startOrigin: {
@@ -175,18 +176,19 @@
       // ctx.globalCompositeOperation = "source-over"
       // ctx.globalAlpha = 1;           // reset alpha
 
-      if (test_bg) {
-        if (count_bg >= 1) {
-          ctx.fillStyle = 'rgba(255,255,255,255,1.0)';
-          ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
-          test_bg = false;
-        }
-        count_bg++;
-      }
+      // if (test_bg) {
+      //   if (count_bg >= 1) {
+      //     ctx.fillStyle = 'rgba(255,255,255,255,1.0)';
+      //     ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+      //     test_bg = false;
+      //   }
+      //   count_bg++;
+      // }
 
       // ctx.clearRect(0, 0, width, height);
 
-      ctx.fillStyle = 'rgba(1,2.5,4,0.05)';
+      // ctx.fillStyle = 'rgba(1,2.5,4,0.05)'; ORIG
+      ctx.fillStyle = 'rgba(0,0,0,1)';
       // ctx.fillStyle = 'rgba(1,4.5,11.75,0.05)';  // this is how it gives it a tail: fills everything gradually this color
       // lower alpha, longer tails
       ctx.fillRect(0, 0, width, height);
