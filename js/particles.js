@@ -23,6 +23,18 @@
   return s
 })({
   "./src/js/index.js": [function(require, module, exports) {
+    var speed_div = 165;
+    // Function that returns a Promise for the FPS
+    const getFPS = () =>
+      new Promise(resolve =>
+        requestAnimationFrame(t1 =>
+          requestAnimationFrame(t2 => resolve(1000 / (t2 - t1)))
+        )
+      )
+
+    // Calling the function to get the FPS
+    getFPS().then(speed_div);
+    speed_div = speed_div / 60;
     var count_parts = 2000;
     var Particle = require('./particles'),
       canvas = document.querySelector('#particlesField'),
@@ -34,8 +46,8 @@
         // count: 1000,
         count: count_parts,
         size: Math.max(width, height) / count_parts,
-        minSpeed: 1,
-        maxSpeed: 50,
+        minSpeed: 1/speed_div,
+        maxSpeed: 50/speed_div,
         startOrigin: {
           x: undefined,
           y: undefined
@@ -46,9 +58,10 @@
         // count: 1000,
         count: count_parts,
         // size: Math.max(width, height) / count_parts,
-        size: Math.max(width, height) / 4500,
-        minSpeed: 10,
-        maxSpeed: 50,
+        // size: Math.max(width, height) / 4500,
+        size: Math.max(width, height) / 8000,
+        minSpeed: 10/speed_div,
+        maxSpeed: 50/speed_div,
         startOrigin: {
           x: undefined,
           y: undefined
@@ -58,8 +71,8 @@
       presetFast = {
         count: 1000,
         size: Math.max(width, height) / count_parts,
-        minSpeed: 20,
-        maxSpeed: 100,
+        minSpeed: 20/speed_div,
+        maxSpeed: 100/speed_div,
         startOrigin: {
           x: undefined,
           y: undefined
@@ -69,8 +82,8 @@
       presetCentralExplode = {
         count: count_parts / 2,
         size: Math.max(width, height) / count_parts,
-        minSpeed: 1,
-        maxSpeed: 100,
+        minSpeed: 1/speed_div,
+        maxSpeed: 100/speed_div,
         startOrigin: {
           x: width / 2,
           y: height / 2
@@ -82,8 +95,8 @@
         size: function() {
           return Math.random() * 10 + 1;
         },
-        minSpeed: 20,
-        maxSpeed: 100,
+        minSpeed: 20/speed_div,
+        maxSpeed: 100/speed_div,
         startOrigin: {
           x: 1,
           y: 1
@@ -95,8 +108,8 @@
         size: function() {
           return Math.random() * 2 + 0.2;
         },
-        minSpeed: 20,
-        maxSpeed: 100,
+        minSpeed: 20/speed_div,
+        maxSpeed: 100/speed_div,
         startOrigin: {
           x: width / 2,
           y: height / 2
